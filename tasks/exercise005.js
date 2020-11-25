@@ -20,7 +20,13 @@
 // wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
 function mexicanWave(str){
-    // Your code here!
+    var result = [], i;
+    
+    for(i=0; i< str.length; i++) {
+    if (str[i] === '') continue;
+        result.push(Array.from(str, (k, j) => i === j ? k.toUpperCase() : k).join(''));
+    }
+    return result;
 }
 
 module.exports = {
