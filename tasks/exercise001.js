@@ -7,8 +7,22 @@
 
 function singles(arr){
     if (arr === undefined) throw new Error("array is required");
-    // Your code here!
-}
+var arr = [1, 4, 4, 5, 6, 1, 8];
+
+// iterate over elements and filter
+var res = arr.filter(function(v) {
+  // get the count and filter based on the count
+  return arr.filter(function(v1) {
+    // compare with current element
+    return v1 == v;
+    // check length
+  }).length == 1;
+});
+    
+ // Getting sum of numbers
+    var sum = res.reduce(function(a, b){
+        return a + b;
+    }, 0);
 
 module.exports = {
     singles
