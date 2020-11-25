@@ -3,7 +3,10 @@
 // More examples in the test cases below.
 
 function past(h, m, s){
-    // Your code here!
+   var d = new Date();
+   var h = d.getTime();
+   var m = d.getMinutes();
+   var s = d.getSeconds();
 }
 
 module.exports = {
